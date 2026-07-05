@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maalivahtivalmennus Helsinki | Helsinki Goalkeeper Coaching</title>
   <meta name="description" content="Yksilöllistä ja pelinomaista maalivahtivalmennusta Helsingissä 10–16-vuotiaille pelaajille. Varaa ensimmäinen treeni helposti.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Maalivahtivalmennus Helsinki | Helsinki Goalkeeper Coaching">
+  <meta property="og:description" content="Yksilöllistä ja pelinomaista maalivahtivalmennusta Helsingissä 10–16-vuotiaille pelaajille. Varaa ensimmäinen treeni helposti.">
+  <meta property="og:image" content="assets/goalkeeper.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Maalivahtivalmennus Helsinki | Helsinki Goalkeeper Coaching">
+  <meta name="twitter:description" content="Yksilöllistä ja pelinomaista maalivahtivalmennusta Helsingissä 10–16-vuotiaille pelaajille. Varaa ensimmäinen treeni helposti.">
+  <meta name="twitter:image" content="assets/goalkeeper.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
@@ -22,6 +31,12 @@
           <a href="#faq">FAQ</a>
           <a href="#contact">Yhteys</a>
         </div>
+
+        <button class="nav-toggle" aria-label="Avaa valikko" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
         <a class="nav-cta" href="#contact">Varaa treeni</a>
       </nav>
@@ -261,19 +276,28 @@
         <div class="container contact-card">
           <p class="eyebrow">Ota yhteyttä</p>
           <h2>Valmis varaamaan ensimmäisen treenin?</h2>
-          <p>
-            Lähetä viesti, niin sovitaan pelaajalle sopiva treeniaika ja käydään
-            tavoitteet läpi.
-          </p>
 
-          <div class="contact-actions">
-            <a class="button primary" href="mailto:info@gatogloves.com">
-              info@gatogloves.com
-            </a>
-            <a class="button secondary" href="tel:+358451447132">
-              045 144 7132
-            </a>
-          </div>
+          <form class="contact-form" action="https://formspree.io/f/xojorpqo" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Nimi</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Puhelin</label>
+                <input type="tel" id="phone" name="phone" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Sähköposti</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Viesti</label>
+              <textarea id="message" name="message" rows="4" placeholder="Kerro pelaajan iästä ja tavoitteista"></textarea>
+            </div>
+            <button type="submit" class="button primary full">Lähetä yhteydenottopyyntö</button>
+          </form>
         </div>
       </section>
     </main>
