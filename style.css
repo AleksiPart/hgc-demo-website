@@ -189,8 +189,9 @@ h1, h2, h3 {
 .hero {
   min-height: 100vh;
   padding: 170px 28px 100px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
   gap: 56px;
   max-width: 1200px;
   margin: 0 auto;
@@ -265,29 +266,9 @@ h1 {
 
 .hero-video {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 4 / 5;
   display: block;
   object-fit: cover;
-}
-
-.video-overlay {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 3;
-  padding: 16px 20px;
-  background: var(--ink);
-  border-top: 1px solid var(--ink);
-}
-
-.video-overlay span {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 13px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: var(--paper);
 }
 
 /* ============================================
@@ -666,6 +647,7 @@ h2 {
    ============================================ */
 @media (max-width: 980px) {
   .hero {
+    grid-template-columns: 1fr;
     padding-top: 150px;
   }
 
@@ -704,10 +686,6 @@ h2 {
   .hero {
     padding: 120px 20px 70px;
     gap: 40px;
-  }
-
-  .hero-video {
-    aspect-ratio: 4 / 3;
   }
 
   .image-card img {
