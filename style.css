@@ -650,6 +650,8 @@ h2 {
 
   .hero-visual {
     max-width: 620px;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .cards,
@@ -664,6 +666,11 @@ h2 {
 }
 
 @media (max-width: 720px) {
+  .hero-visual {
+    max-width: none;
+    width: 100%;
+  }
+
   .site-header {
     top: 12px;
     padding: 0 14px;
