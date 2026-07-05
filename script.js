@@ -42,3 +42,12 @@ window.addEventListener("DOMContentLoaded", () => {
     }, 150 * index);
   });
 });
+
+const header = document.querySelector(".site-header");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 40) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});

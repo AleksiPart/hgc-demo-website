@@ -75,6 +75,11 @@ h1, h2, h3 {
   border-bottom: 1px solid var(--line);
 }
 
+.site-header.scrolled .navbar {
+  padding: 12px 28px;
+  background: rgba(10, 10, 10, 0.97);
+}
+
 .navbar {
   max-width: 1200px;
   margin: 0 auto;
@@ -869,5 +874,50 @@ h2 {
 @media (max-width: 720px) {
   .form-row {
     grid-template-columns: 1fr;
+  }
+}
+
+.compare-table {
+  border: 1px solid var(--line-strong);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.compare-row {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+}
+.compare-row:last-child {
+  border-bottom: none;
+}
+.compare-row span {
+  padding: 16px 12px;
+  text-align: center;
+}
+.compare-row span:first-child {
+  text-align: left;
+  color: var(--muted);
+}
+.compare-header {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--muted);
+}
+.compare-highlight {
+  background: var(--ink);
+  color: var(--paper);
+  font-weight: 700;
+}
+@media (max-width: 720px) {
+  .compare-row {
+    grid-template-columns: 1.2fr 0.9fr 0.9fr 0.9fr;
+    font-size: 12px;
+  }
+  .compare-row span {
+    padding: 12px 6px;
   }
 }
