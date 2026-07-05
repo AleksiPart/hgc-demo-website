@@ -42,3 +42,37 @@ window.addEventListener("DOMContentLoaded", () => {
     }, 150 * index);
   });
 });
+
+const heroVideo = document.querySelector(".hero-media .hero-image");
+if (heroVideo) {
+  const isDesktop = window.matchMedia("(min-width: 981px)").matches;
+
+  if (isDesktop) {
+    heroVideo.pause();
+    let duration = 0;
+    heroVideo.addEventListener("loadedmetadata", () => {
+      duration = heroVideo.duration;
+    });
+
+    let ticking = false;
+    function updateScrub() {
+      const heroSection = document.querySelector(".hero");
+      const heroHeight = heroSection.offsetHeight;
+      const progress = Math.min(Math.max(window.scrollY / heroHeight, 0), 1);
+      if (duration > 0) {
+        heroVideo.currentTime = progress * duration;
+      }
+      ticking = false;
+    }
+    window.addEventListener("scroll", () => {
+      if (!ticking) {
+        requestAnimationFrame(updateScrub);
+        ticking = true;
+      }
+    });
+  } else {
+    heroVideo.setAttribute("autoplay", "");
+    heroVideo.setAttribute("loop", "");
+    heroVideo.play().catch(() => {});
+  }
+}
