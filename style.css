@@ -4,6 +4,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -83,6 +84,7 @@ a {
   max-width: 1220px;
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
 }
 
 .hero::before {
