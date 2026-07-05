@@ -923,3 +923,13 @@ h2 {
     padding: 12px 6px;
   }
 }
+
+.pricing-note {
+  margin: 24px 0;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(10, 10, 10, 0.7);
+}
