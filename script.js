@@ -17,3 +17,12 @@ const revealObserver = new IntersectionObserver(
   { threshold: 0.15 }
 );
 revealElements.forEach((el) => revealObserver.observe(el));
+
+window.addEventListener("DOMContentLoaded", () => {
+  const loadElements = document.querySelectorAll("[data-load-reveal]");
+  loadElements.forEach((el, index) => {
+    setTimeout(() => {
+      el.classList.add("is-visible");
+    }, 150 * index);
+  });
+});
