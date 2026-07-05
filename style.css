@@ -452,6 +452,12 @@ h2 {
   padding: 34px;
   border: 1px solid var(--ink);
   border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card .button {
+  margin-top: auto;
 }
 
 .pricing-card.featured {
