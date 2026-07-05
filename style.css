@@ -576,6 +576,7 @@ h2 {
     transform: translateY(0) scale(1);
   }
 }
+
 .image-section {
   padding-top: 70px;
   padding-bottom: 70px;
@@ -610,17 +611,19 @@ h2 {
   object-fit: cover;
   border-radius: 26px;
 }
+
 @media (max-width: 980px) {
   .hero {
     grid-template-columns: 1fr;
     padding-top: 150px;
-.image-layout {
-  grid-template-columns: 1fr;
-}
+  }
 
-.image-card img {
-  height: 460px;
-}
+  .image-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .image-card img {
+    height: 460px;
   }
 
   h1 {
@@ -629,10 +632,6 @@ h2 {
 
   .hero-visual {
     max-width: 620px;
-  }
-
-  .video-placeholder {
-    min-height: 420px;
   }
 
   .cards,
@@ -649,10 +648,11 @@ h2 {
 @media (max-width: 720px) {
   .site-header {
     top: 12px;
-    padding: 0 14px
-.image-card img {
-  height: 340px;
-}
+    padding: 0 14px;
+  }
+
+  .image-card img {
+    height: 340px;
   }
 
   .navbar {
@@ -696,10 +696,6 @@ h2 {
 
   .hero-stats {
     grid-template-columns: 1fr;
-  }
-
-  .video-placeholder {
-    min-height: 340px;
   }
 
   .section {
