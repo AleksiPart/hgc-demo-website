@@ -429,6 +429,16 @@ h2 {
   color: rgba(0, 0, 0, 0.55);
 }
 
+.pricing-card.featured .button.primary {
+  background: #050505;
+  color: white;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.22);
+}
+
+.pricing-card.featured .button.primary:hover {
+  background: #1a1a1a;
+}
+
 .pricing-card ul {
   padding: 0;
   margin: 0 0 30px;
@@ -447,7 +457,7 @@ h2 {
 }
 
 .pricing-card li::before {
-  content: "✓";
+  content: "âœ“";
   margin-right: 10px;
   font-weight: 900;
 }
@@ -618,6 +628,14 @@ h2 {
     padding-top: 150px;
   }
 
+  .video-card {
+    transform: none;
+  }
+
+  .hero-video {
+    height: 380px;
+  }
+
   .image-layout {
     grid-template-columns: 1fr;
   }
@@ -695,7 +713,30 @@ h2 {
   }
 
   .hero-stats {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .hero-stats div {
+    padding: 12px 8px;
+  }
+
+  .hero-stats strong {
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+
+  .hero-stats span {
+    font-size: 10.5px;
+  }
+
+  .card {
+    min-height: auto;
+    padding: 26px;
+  }
+
+  .card-number {
+    margin-bottom: 22px;
   }
 
   .section {
